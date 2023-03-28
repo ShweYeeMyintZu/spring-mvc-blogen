@@ -15,6 +15,59 @@
     </div>
     </div>
 </header>
+    <section class="py-4 bg-light mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col md-6 offset-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Users...">
+                        <div class="input-group-append">
+                            <a href="#" class="btn btn-success">Search</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+
+                            <div class="card-header">
+                                <h3>Users</h3>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Date Posted</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr th:each="us: ${users}">
+                                    <td th:text="${us.id}"></td>
+                                    <td th:text="${us.name}"></td>
+                                    <td th:text="${us.email}"></td>
+                                    <td th:text="${us.dateRegister}"></td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 </main>
 
 </body>
